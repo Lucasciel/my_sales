@@ -1,0 +1,22 @@
+{
+  "root": true, // Define que este é o arquivo principal de configuração do ESLint no projeto
+
+  "parser": "@typescript-eslint/parser", // Usa um parser que entende TypeScript
+
+  "plugins": ["@typescript-eslint", "prettier"], // Adiciona suporte para regras específicas de TypeScript
+
+  "extends": [
+      "eslint:recommended", // Ativa regras recomendadas do ESLint para JavaScript
+      "plugin:@typescript-eslint/eslint-recommended", // Ajusta as regras padrão para TypeScript
+      "plugin:@typescript-eslint/recommended", // Ativa regras recomendadas do plugin TypeScript
+      "prettier/@typescript-eslint", // Ajusta para evitar conflitos entre ESLint e Prettier
+      "plugin:prettier/recommended" // Usa o Prettier para formatação automática do código
+  ],
+
+  "rules": {
+      "no-console": "warn", // Gera um aviso ao usar console.log no código
+      "prettier/prettier": "error" //Gera um erro ao violar regras do Prettier
+  }
+}
+
+//prettier e eslint são ferramentas que ajudam a manter o código limpo e organizado
