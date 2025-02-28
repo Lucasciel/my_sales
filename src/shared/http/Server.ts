@@ -1,3 +1,5 @@
+// PASTA ONDE FICA O SERVIDOR
+
 //importações instaladas
 import 'reflect-metadata'
 import 'express-async-errors'
@@ -8,6 +10,7 @@ import cors from "cors";
 import routes from "./routes";
 import ErrorHandleMiddleware from "@shared/middlewares/ErrorHandleMiddleware";
 import { AppDataSource } from '@shared/typeorm/data-source';
+import {errors} from 'celebrate';
 
 
 AppDataSource.initialize()
@@ -18,6 +21,7 @@ AppDataSource.initialize()
   app.use(express.json())
 
   app.use(routes);
+  app.use(errors());
   app.use(ErrorHandleMiddleware.haddleError);
 
   console.log("servidor conectado na base de dados!")

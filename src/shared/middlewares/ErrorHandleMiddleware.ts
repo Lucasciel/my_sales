@@ -1,3 +1,5 @@
+//AQUI FICARA O TRATAMENTO DE ERROS GLOBAIS DA APLICAÇÃO
+
 import AppError from '@shared/errors/AppError';
 import { NextFunction, Request, Response } from 'express';
 

@@ -9,7 +9,7 @@ interface IUpdateProduct {
   quantity: number;
 }
 
-export class UpdateProductService {
+export default class UpdateProductService {
   async execute({ id, name, price, quantity }: IUpdateProduct): Promise<Product> {
     const product = await ProductsRepositories.findById(id);
 
@@ -31,5 +31,5 @@ export class UpdateProductService {
 
     return product;
 
-  } 
+  }
 }
